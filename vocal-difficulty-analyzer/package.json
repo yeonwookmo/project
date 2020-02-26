@@ -18,7 +18,9 @@
     "start": "cross-env NODE_PATH=src/ react-scripts start",
     "build": "cross-env NODE_PATH=src/ react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://ereproject2020.github.io/project/",
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
