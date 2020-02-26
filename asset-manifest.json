@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/project/static/css/main.a0f04cef.chunk.css",
+    "main.js": "/project/static/js/main.391e7124.chunk.js",
+    "main.js.map": "/project/static/js/main.391e7124.chunk.js.map",
+    "runtime-main.js": "/project/static/js/runtime-main.ab59f22f.js",
+    "runtime-main.js.map": "/project/static/js/runtime-main.ab59f22f.js.map",
+    "static/js/2.72a6c197.chunk.js": "/project/static/js/2.72a6c197.chunk.js",
+    "static/js/2.72a6c197.chunk.js.map": "/project/static/js/2.72a6c197.chunk.js.map",
+    "index.html": "/project/index.html",
+    "precache-manifest.7ea871e5343b70bcea59616c10f7f5ae.js": "/project/precache-manifest.7ea871e5343b70bcea59616c10f7f5ae.js",
+    "service-worker.js": "/project/service-worker.js",
+    "static/css/main.a0f04cef.chunk.css.map": "/project/static/css/main.a0f04cef.chunk.css.map",
+    "static/js/2.72a6c197.chunk.js.LICENSE.txt": "/project/static/js/2.72a6c197.chunk.js.LICENSE.txt",
+    "static/media/reset.svg": "/project/static/media/reset.a6b1cf7a.svg",
+    "static/media/Starrate.css": "/project/static/media/star-half.298334ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab59f22f.js",
+    "static/js/2.72a6c197.chunk.js",
+    "static/css/main.a0f04cef.chunk.css",
+    "static/js/main.391e7124.chunk.js"
+  ]
+}
