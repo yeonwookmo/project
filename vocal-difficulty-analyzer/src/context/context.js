@@ -1,4 +1,8 @@
 import React, { Component, createContext } from 'react';
+import axios from "axios";
+
+axios.defaults.xsrfCookieName = "csrftoken";
+axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const Context = createContext();
 const { Provider, Consumer: InfoConsumer } = Context;
@@ -38,11 +42,27 @@ class InfoProvider extends Component {
             },
             )
         },
-        setDifficulty: (data) => {
-            this.setState({
-                difficulty : data
-            })
+        setDifficulty : async () => {
+            await axios.get("/api/comment/", {
+                params: {
+                    song: this.state.songInfo[0].id
+                }
+            }).then(function(res){
+                var rating=0
+                for(var i in res.data){
+                    rating=rating+res.data[i].starsIdx+res.data[i].starsRating
+                }
+                this.setState({difficulty : (rating/res.data.length).toFixed(2)})
+                console.log("calculate difficulty")
+            }.bind(this)    
+            ).catch(e => console.log(e))
+            return true
         }
+        //setDifficulty: (data) => {
+        //   this.setState({
+        //        difficulty : data
+        //    })
+       // }
     }
     render() {
         const { state, actions } = this;

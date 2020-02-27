@@ -9,28 +9,11 @@ class Songinfo extends Component {
     state = {
         loading: true
     }
-    getDifficulty() {
-        axios.get("/api/comment/", {
-            params: {
-                song: this.props.song.id
-            }
-        }).then(function(res){
-            var rating=0
-            for(var i in res.data){
-                rating=rating+res.data[i].starsIdx+res.data[i].starsRating
-            }
-            this.props.setDifficulty((rating/res.data.length).toFixed(2))
-            console.log("calculate difficulty")
-            console.log(this.props.difficulty)
-        }.bind(this)    
-        ).then(
-            this.setState({ loading: false })
-        ).catch(e => console.log(e))
-    }
 
     componentDidMount(){
-        console.log("?")
-        this.getDifficulty()
+        if(this.props.setDifficulty()){
+            this.setState({loading : false})
+        }
     }
     render() {
         const { song } = this.props
