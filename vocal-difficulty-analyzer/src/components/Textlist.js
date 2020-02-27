@@ -17,7 +17,7 @@ class Textlist extends Component {
                 &&(index<array.length-this.state.index)) {
                     return (
                         <div key={index}>
-                            <Text info={info}></Text>
+                            <Text info={info} onMode={this.props.onMode}></Text>
                         </div>
                     )
                 }
