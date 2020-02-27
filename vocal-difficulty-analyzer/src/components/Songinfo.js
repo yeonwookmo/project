@@ -29,6 +29,7 @@ class Songinfo extends Component {
     }
 
     componentDidMount(){
+        console.log("?")
         this.getDifficulty()
     }
     render() {
