@@ -17,7 +17,7 @@ class Textresult extends Component {
         const{songInfo}=this.props
         return ( 
         <div>
-            <Songinfo songInfo={songInfo[0]}></Songinfo>
+            <Songinfo song={songInfo[0]}></Songinfo>
             <div>총 {this.props.comment.length}명이 평가하였습니다.</div>
             
             <Textlist></Textlist>

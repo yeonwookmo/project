@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { useConsumer } from '../context/context';
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 class Songinfo extends Component {
     state = {
-        loading: true,
-        difficulty: 0
+        loading: true
     }
     getDifficulty() {
         axios.get("/api/comment/", {
             params: {
-                song: this.props.songInfo.id
+                song: this.props.song.id
             }
         }).then(function(res){
             var rating=0
@@ -27,12 +27,12 @@ class Songinfo extends Component {
     }
 
     render() {
-        const { songInfo } = this.props
-        console.log(songInfo)
+        const { song } = this.props
+        console.log(song)
         if (this.state.loading == false) {
             return (
                 <div>
-                    노래제목: {songInfo.title}   가수: {songInfo.singer}  난이도:{this.props.difficulty}
+                    노래제목: {song.title}   가수: {song.singer}  난이도:{this.props.difficulty}
                 </div>
 
             );
@@ -47,4 +47,4 @@ class Songinfo extends Component {
     }
 }
 
-export default Songinfo
+export default useConsumer(Songinfo);
