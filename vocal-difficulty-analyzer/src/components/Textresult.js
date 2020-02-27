@@ -20,7 +20,7 @@ class Textresult extends Component {
             <Songinfo song={songInfo[0]}></Songinfo>
             <div>총 {this.props.comment.length}명이 평가하였습니다.</div>
             
-            <Textlist></Textlist>
+            <Textlist onMode = {this.props.onMode}></Textlist>
             
             <Login onModeComment={this.onModeComment}></Login>
             <button type="button" onClick={this.onModeSearch}> 뒤로 </button>
