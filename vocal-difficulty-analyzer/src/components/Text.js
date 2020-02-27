@@ -18,20 +18,6 @@ class Text extends Component {
         const { update, text, starsIdx, starsRating } = this.state;
         const { info, comment, setComment } = this.props;
         if (update) {
-            setComment(
-                comment.map(item => (info.id === item.id ?
-                    {
-                        id: this.props.info.id,
-                        text: text,
-                        starsIdx: starsIdx,
-                        starsRating: starsRating,
-                        userId: info.userId,
-                        userName: info.userName,
-                        userImage: info.userImage,
-                        song: this.props.songInfo[0].id
-                    } : item))
-            )
-            console.log(info)
             axios.put(`/api/comment/${this.props.info.id}/`, {
                 id: this.props.info.id,
                 text: text,
@@ -42,7 +28,19 @@ class Text extends Component {
                 userImage: info.userImage,
                 song: this.props.songInfo[0].id
             }).then(
-                this.setState({})
+                setComment(
+                    comment.map(item => (info.id === item.id ?
+                        {
+                            id: this.props.info.id,
+                            text: text,
+                            starsIdx: starsIdx,
+                            starsRating: starsRating,
+                            userId: info.userId,
+                            userName: info.userName,
+                            userImage: info.userImage,
+                            song: this.props.songInfo[0].id
+                        } : item))
+                )
             ).catch(e => console.log(e.message))
         } else {
             this.setState({ text: info.text })
