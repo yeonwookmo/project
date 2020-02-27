@@ -17,7 +17,7 @@ class Textlist extends Component {
                 &&(index<array.length-this.state.index)) {
                     return (
                         <div key={index}>
-                            <Text info={info} setComment={this.props.setComment}></Text>
+                            <Text info={info} setComment={this.props.setComment} difficultyUpdate={this.props.difficultyUpdate}></Text>
                         </div>
                     )
                 }
