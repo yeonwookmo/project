@@ -41,7 +41,9 @@ class Text extends Component {
                 userName: info.userName,
                 userImage: info.userImage,
                 song: this.props.songInfo[0].id
-            }).catch(e => console.log(e.message))
+            }).then(
+                this.setState({})
+            ).catch(e => console.log(e.message))
         } else {
             this.setState({ text: info.text })
         }
