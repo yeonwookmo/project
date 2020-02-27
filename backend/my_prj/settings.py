@@ -25,7 +25,7 @@ SECRET_KEY = '$qy8jaepy==nysf8f+===b438d*otq^0ux6+&1@a*0f3@esv3v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['woojinger.pythonanywhere.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'woojinger.pythonanywhere.com',
 )
 
 ROOT_URLCONF = 'my_prj.urls'
@@ -63,7 +63,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join("C:\\Users\\shin\\github\\momo", 'vocal-difficulty-analyzer', 'build')
+            os.path.join("/home/woojinger/project/", 'vocal-difficulty-analyzer', 'build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -78,7 +78,7 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join("C:\\Users\\shin\\github\\momo", 'vocal-difficulty-analyzer', 'build', 'static')
+    os.path.join("/home/woojinger/project/", 'vocal-difficulty-analyzer', 'build', 'static')
 ]
 
 WSGI_APPLICATION = 'my_prj.wsgi.application'
