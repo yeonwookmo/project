@@ -6,6 +6,10 @@ axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 class Songinfo extends Component {
+    constructor(props){
+        super(props);
+        this.setState({loading : true});
+    }
     state = {
         loading: true
     }
