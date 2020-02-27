@@ -13,6 +13,7 @@ class Songlist extends Component {
         const data = this.props.songList.filter(
             item=>item.id===parseInt(e.target.id)
         )
+        console.log(data)
         setSongInfo(data);
         await axios.get("/api/comment/",{
             params:{
@@ -21,10 +22,9 @@ class Songlist extends Component {
         }).then(res=>{
             setComment(res.data)
         }).then(onMode())
-        
-        
     }
     render() { 
+
         const style={
             border: '1px solid black',
             padding: '8px',
