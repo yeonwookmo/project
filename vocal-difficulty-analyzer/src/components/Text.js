@@ -40,9 +40,7 @@ class Text extends Component {
                 userName: info.userName,
                 userImage: info.userImage,
                 song: this.props.songInfo[0].id
-            }).then(
-                
-            ).catch(e => console.log(e.message))
+            }).catch(e => console.log(e.message))
         } else {
             this.setState({ text: info.text })
         }
@@ -53,7 +51,6 @@ class Text extends Component {
     handleRemove = async () => {
         const { setComment, comment } = this.props
         await axios.delete(`/api/comment/${this.props.info.id}`)
-        .then()
         setComment(comment.filter(object => object.id !== this.props.info.id))
     }
     handleChange = (e) => {

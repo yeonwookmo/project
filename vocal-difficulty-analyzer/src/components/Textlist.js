@@ -13,7 +13,7 @@ class Textlist extends Component {
     }
     render() {
         const { comment } = this.props
-        this.difficulty = 0
+        this.difficulty = 0.00
         const list = comment.map(
             function (info, index, array) {
                 this.difficulty = this.difficulty + info.starsIdx + info.starsRating
@@ -31,8 +31,9 @@ class Textlist extends Component {
         const{songInfo}=this.props
         return (
             <div>
-                <div>{this.difficulty/comment.length}</div>
-                <Songinfo song={songInfo[0]}></Songinfo>
+                <div>
+                    노래제목: {songInfo[0].title}   가수: {songInfo[0].singer}  난이도:{this.difficulty/comment.length}
+                </div>
                 <div>{list}</div>
                 <button type="submit" onClick={this.moreReview}
                 >more review</button>
