@@ -19,7 +19,7 @@ class Songinfo extends Component {
             for(var i in res.data){
                 rating=rating+res.data[i].starsIdx+res.data[i].starsRating
             }
-            this.props.setDifficulty({difficulty : (rating/res.data.length).toFixed(2)})
+            this.props.setDifficulty((rating/res.data.length).toFixed(2))
             console.log("calculate difficulty")
             console.log(this.props.difficulty)
         }.bind(this)    
