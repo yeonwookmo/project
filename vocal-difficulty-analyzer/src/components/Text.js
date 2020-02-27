@@ -68,7 +68,6 @@ class Text extends Component {
         })
     }
     render() {
-        console.log(this.props.info)
         const { update } = this.state
         if (this.props.info.userId === this.props.userInfo.userId) {
             this.authorized = true

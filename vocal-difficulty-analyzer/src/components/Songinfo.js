@@ -31,6 +31,7 @@ class Songinfo extends Component {
     render() {
         const { song } = this.props
         console.log(song)
+        console.log(this.state.loading)
         if (this.state.loading == false) {
             return (
                 <div>
