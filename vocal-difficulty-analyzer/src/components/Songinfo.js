@@ -20,7 +20,7 @@ class Songinfo extends Component {
     setDifficulty = async () => {
         await axios.get("/api/comment/", {
             params: {
-                song: this.state.songInfo[0].id
+                song: this.props.song.id
             }
         }).then(function(res){
             var rating=0
