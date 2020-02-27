@@ -14,11 +14,11 @@ class Text extends Component {
         starsRating: this.props.info.starsRating,
     }
     authorized = false
-    handleUpdate = () => {
+    handleUpdate = async () => {
         const { update, text, starsIdx, starsRating } = this.state;
         const { info, comment, setComment } = this.props;
         if (update) {
-            axios.put(`/api/comment/${this.props.info.id}/`, {
+            await axios.put(`/api/comment/${this.props.info.id}/`, {
                 id: this.props.info.id,
                 text: text,
                 starsIdx: starsIdx,
