@@ -36,7 +36,6 @@ class Commentform extends Component {
     handleSubmit = async (e) => {
         const { setComment, comment } = this.props
         e.preventDefault();
-        console.log(this.props.songInfo[0].id)
         await axios.post("/api/comment/", {
             song: this.props.songInfo[0].id,
             text: this.state.text,

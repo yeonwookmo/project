@@ -92,8 +92,6 @@ class SearchForm extends Component {
         })
     }
     render() {
-        console.log('SearchForm')
-        console.log(this.state.songList)
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

@@ -29,7 +29,7 @@ class InfoProvider extends Component {
         // setSongInfo의 concat 부분은 백으로만 구동시 수정=>songInfo:data
         setSongInfo: (data) => {
             this.setState({
-                songInfo: this.state.songInfo.concat(data[0])
+                songInfo: data[0]
             })
         },
         setComment: (data) => {

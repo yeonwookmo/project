@@ -13,9 +13,6 @@ class Textresult extends Component {
     onModeSearch=()=>{
         this.props.onMode('search')
     }
-    difficultyUpdate=()=>{
-        this.setState({})
-    }
     render() {
         const{songInfo}=this.props
         return ( 
