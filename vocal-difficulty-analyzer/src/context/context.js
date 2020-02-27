@@ -22,7 +22,7 @@ class InfoProvider extends Component {
             starsIdx: 6,
             starsRating: 2
         }],
-        difficulty:0
+        commentUpdate:false
     }
     actions = {
         setUserInfo: (data) => {
@@ -42,27 +42,11 @@ class InfoProvider extends Component {
             },
             )
         },
-        setDifficulty : async () => {
-            await axios.get("/api/comment/", {
-                params: {
-                    song: this.state.songInfo[0].id
-                }
-            }).then(function(res){
-                var rating=0
-                for(var i in res.data){
-                    rating=rating+res.data[i].starsIdx+res.data[i].starsRating
-                }
-                this.setState({difficulty : (rating/res.data.length).toFixed(2)})
-                console.log("calculate difficulty")
-            }.bind(this)    
-            ).catch(e => console.log(e))
-            return true
+        setCommentUpdate: (data) => {
+            this.setState({
+                commentUpdate : data
+            })
         }
-        //setDifficulty: (data) => {
-        //   this.setState({
-        //        difficulty : data
-        //    })
-       // }
     }
     render() {
         const { state, actions } = this;
@@ -85,12 +69,12 @@ function useConsumer(WrappedComponent) {
                             userInfo={state.userInfo}
                             songInfo={state.songInfo}
                             comment={state.comment}
-                            difficulty={state.difficulty}
                             setId={actions.setId}
                             setSongInfo={actions.setSongInfo}
                             setComment={actions.setComment}
                             setUserInfo={actions.setUserInfo}
-                            setDifficulty={actions.setDifficulty}
+                            commentUpdate={state.commentUpdate}
+                            setCommentUpdate={actions.setCommentUpdate}
                         />
                         //{..props}는 parents props, 나머지는 context props를 의미
                     )
