@@ -22,7 +22,6 @@ class InfoProvider extends Component {
             starsIdx: 6,
             starsRating: 2
         }],
-        commentUpdate:false
     }
     actions = {
         setUserInfo: (data) => {
@@ -42,11 +41,6 @@ class InfoProvider extends Component {
             },
             )
         },
-        setCommentUpdate: (data) => {
-            this.setState({
-                commentUpdate : data
-            })
-        }
     }
     render() {
         const { state, actions } = this;
@@ -73,8 +67,6 @@ function useConsumer(WrappedComponent) {
                             setSongInfo={actions.setSongInfo}
                             setComment={actions.setComment}
                             setUserInfo={actions.setUserInfo}
-                            commentUpdate={state.commentUpdate}
-                            setCommentUpdate={actions.setCommentUpdate}
                         />
                         //{..props}는 parents props, 나머지는 context props를 의미
                     )

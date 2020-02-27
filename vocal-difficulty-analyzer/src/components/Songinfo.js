@@ -7,14 +7,8 @@ axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 class Songinfo extends Component {
     state = {
-        loading: this.props.commentUpdate,
+        loading: true,
         difficulty : 0
-    }
-
-    componentDidMount(){
-        if(this.setDifficulty()){
-            this.setState({loading : false})
-        }
     }
 
     setDifficulty = async () => {
@@ -30,22 +24,22 @@ class Songinfo extends Component {
             this.setState({difficulty : (rating/res.data.length).toFixed(2)})
             console.log("calculate difficulty")
         }.bind(this)    
+        ).then(
+            this.setState({loading : false})
         ).catch(e => console.log(e))
         return true
     }
 
     render() {
         const { song } = this.props
-        console.log(song)
-        console.log(this.state.loading)
-        if (this.state.loading == false) {
+        if ((this.state.loading == false)) {
             return (
                 <div>
                     노래제목: {song.title}   가수: {song.singer}  난이도:{this.state.difficulty}
                 </div>
-
             );
         }else{
+            this.setDifficulty()
             return(
                 <div>
                     loading..
