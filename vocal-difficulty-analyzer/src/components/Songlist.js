@@ -15,7 +15,6 @@ class Songlist extends Component {
         )
         console.log(data)
         setSongInfo(data);
-        console.log(this.props.songInfo)
         await axios.get("/api/comment/",{
             params:{
                 song:e.target.id

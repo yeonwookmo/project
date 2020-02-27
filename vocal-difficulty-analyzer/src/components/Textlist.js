@@ -32,7 +32,7 @@ class Textlist extends Component {
         return (
             <div>
                 <div>
-                    노래제목: {songInfo[0].title}   가수: {songInfo[0].singer}  난이도:{this.difficulty/comment.length}
+                    노래제목: {songInfo[0].title}   가수: {songInfo[0].singer}  난이도:{(this.difficulty/comment.length).toFixed(2)}
                 </div>
                 <div>{list}</div>
                 <button type="submit" onClick={this.moreReview}
