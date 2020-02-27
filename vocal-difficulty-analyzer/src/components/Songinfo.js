@@ -19,7 +19,7 @@ class Songinfo extends Component {
             for(var i in res.data){
                 rating=rating+res.data[i].starsIdx+res.data[i].starsRating
             }
-            this.setState({difficulty : (rating/res.data.length).toFixed(2)})
+            this.props.setDifficulty({difficulty : (rating/res.data.length).toFixed(2)})
         }.bind(this)    
         ).then(
             this.setState({ loading: false })
@@ -32,7 +32,7 @@ class Songinfo extends Component {
         if (this.state.loading == false) {
             return (
                 <div>
-                    노래제목: {songInfo.title}   가수: {songInfo.singer}  난이도:{this.state.difficulty}
+                    노래제목: {songInfo.title}   가수: {songInfo.singer}  난이도:{this.props.difficulty}
                 </div>
 
             );

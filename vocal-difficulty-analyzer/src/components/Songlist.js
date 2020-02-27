@@ -35,7 +35,8 @@ class Songlist extends Component {
         let list=songList.map(
             (info)=>(
             <div key={info.id} style={style}>
-            <Songinfo songInfo={info} difficulty={this.props.difficulty} comment={this.props.comment}></Songinfo>
+            <Songinfo songInfo={info} difficulty={this.props.difficulty} comment={this.props.comment}
+            setDifficulty={this.props.setDifficulty}></Songinfo>
             <button id ={info.id} onClick={this.chooseSong}>평가</button>
             </div>
             

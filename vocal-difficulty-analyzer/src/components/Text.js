@@ -40,9 +40,7 @@ class Text extends Component {
                 userName: info.userName,
                 userImage: info.userImage,
                 song: this.props.songInfo[0].id
-            }).then(
-
-            ).catch(e => console.log(e.message))
+            }).catch(e => console.log(e.message))
         } else {
             this.setState({ text: info.text })
         }
@@ -71,7 +69,6 @@ class Text extends Component {
         const { update } = this.state
         if (this.props.info.userId === this.props.userInfo.userId) {
             this.authorized = true
-            console.log("here")
         }
         const style = {
             border: '1px solid black',

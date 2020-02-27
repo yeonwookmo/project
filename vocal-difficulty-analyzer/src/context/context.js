@@ -37,6 +37,11 @@ class InfoProvider extends Component {
                 comment: [].concat(data)
             },
             )
+        },
+        setDifficulty: (data) => {
+            this.setState({
+                difficulty : data
+            })
         }
     }
     render() {
@@ -65,6 +70,7 @@ function useConsumer(WrappedComponent) {
                             setSongInfo={actions.setSongInfo}
                             setComment={actions.setComment}
                             setUserInfo={actions.setUserInfo}
+                            setDifficulty={actions.setDifficulty}
                         />
                         //{..props}는 parents props, 나머지는 context props를 의미
                     )
