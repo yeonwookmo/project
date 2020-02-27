@@ -67,7 +67,7 @@ class Commentform extends Component {
     render() {
         return (
             <div>
-                <Songinfo songInfo={this.props.songInfo}></Songinfo>
+                <Songinfo songInfo={this.props.songInfo[0]}></Songinfo>
                 <div>총 {this.props.comment.length}명이 평가하였습니다.</div>
 
                 <form onSubmit={this.handleSubmit}>
