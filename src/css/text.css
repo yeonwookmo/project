@@ -1,0 +1,60 @@
+.text{
+    border: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 2vh;
+    display:grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "opinion opinion opinion"
+    "star rating updatebutton";
+}
+
+.opinion{
+    grid-area : opinion;
+    position: relative;
+    left: 1vh;
+}
+.opinion textarea{
+    resize: none;
+    font-size: large;
+    margin:auto;
+    padding-left:3vh;
+    width: 70vw;
+}
+.rating{
+    grid-area : rating;
+    position: relative;  
+    margin-left :2vh;
+    font-size: 3vh;
+}
+
+.text Starshow{
+    grid-area: star;
+}
+.updatebutton{
+    grid-area: updatebutton;
+}
+
+.more{
+    float: right;
+    margin: auto;
+}
+
+.past{
+    float:right;
+    margin: auto;
+}
+
+#updatesubmit{
+    padding: 1vh;
+    margin-right: 1vh;
+    border-radius: 1vh;
+}
+
+#delete{
+    padding: 1vh;
+    margin: auto;
+    border-radius: 1vh;
+}

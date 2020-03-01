@@ -1,0 +1,55 @@
+button:hover{
+    cursor:pointer;
+}
+
+.orange{
+    background-color:white;
+    border: solid orange 2px;
+}
+.orange:hover{
+    background-color:orange;
+    color: white;
+}
+
+.pink{
+    background-color:white;
+    border: solid pink 2px;
+}
+.pink:hover{
+    background-color:pink;
+    color: white;
+}
+.goldenrod{
+    background-color:white;
+    border: solid rgb(218, 137, 32) 2px;
+}
+
+.goldenrod:hover{
+    background-color:rgb(218, 137, 32);
+    color: white;
+}
+
+.blue {
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	background-color:#bddbfa;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.blue:hover {
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	background-color:#80b5ea;
+}
+.blue:active {
+	position:relative;
+	top:1px;
+}

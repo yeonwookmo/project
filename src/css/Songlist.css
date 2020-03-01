@@ -1,0 +1,41 @@
+
+.container2{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "label1 title button"
+    "label2 singer button";
+    
+}
+
+.songList{
+    border: 1px solid black;
+    border-radius: 2vh;
+    width: 45vh;
+    padding: 8px;
+    margin: 8px;
+    
+}
+
+.container2 .label1{
+    grid-area: label1;
+    margin: auto auto;
+}
+.container2.label2{
+    grid-area: label2;
+    margin: auto auto;
+}
+.container2.title{
+    grid-area: title;
+    margin: auto auto;
+}
+.container2.singer{
+    grid-area: singer;
+    margin: auto auto;
+}
+.container2 button{
+  grid-area: button;
+  border-radius:1vh;
+  padding:1vh;
+}

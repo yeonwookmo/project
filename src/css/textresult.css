@@ -1,0 +1,24 @@
+#textresult{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 2fr;
+    grid-template-rows: 5fr 1fr ;
+    grid-template-areas:
+    "before left right writecomment";
+}
+
+#before{
+    grid-area:before;
+    width: 15vh;
+    margin: auto;
+}
+
+#writecomment{
+    grid-area: writecomment;
+    width: 15vh;
+    margin: auto;
+}
+
+#login{
+    display:flex;
+    justify-content:center;
+}

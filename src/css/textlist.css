@@ -1,0 +1,32 @@
+.textlist{
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+    grid-template-areas:
+    "picture comment";
+}
+
+.picture{
+    grid-area:picture;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 70%;
+    margin: auto;
+}
+
+.textlist text{
+    grid-area:comment;
+}
+
+#buttons{
+    display:flex;
+    justify-content:center;
+}
+
+#more{
+    grid-area: right;
+    margin:1vh;
+}
+#past{
+    grid-area: left;
+    margin:1vh;
+}

@@ -1,0 +1,56 @@
+.starRate__wrap{
+    margin-top:1vh;
+    width: 17vh;
+    height: 4vh;
+    margin: auto;
+    text-align: left;
+    border: 1px solid #ddd;
+    line-height: 85px;
+}
+
+.reset__btn{
+    display: inline-block;
+    height: 0.5vh;
+    line-height: 2vh;
+    vertical-align: middle;
+}
+
+.reset__btn img{
+    cursor: pointer;
+}
+
+.star__rate{
+    background: url('../images/star-empty.svg');
+    width: 19px;
+    height: 18px;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 4.5vh;
+    margin:0 2px;
+    cursor: pointer;
+}
+
+.star__rate.is-selected{
+    background: url('../images/star-full.svg');
+    width: 19px;
+    height: 18px;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 4.5vh;
+    margin:0 2px;
+    cursor: pointer;
+}
+
+.star__rate.is-half-selected{
+    background: url('../images/star-half.svg');
+    width: 19px;
+    height: 18px;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 4.5vh;
+    margin:0 2px;
+    cursor: pointer;
+}

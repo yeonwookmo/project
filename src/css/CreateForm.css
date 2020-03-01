@@ -1,0 +1,37 @@
+.create{
+    display: "grid";
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: "title singer"
+}
+
+.title{
+    grid-area:"title"
+}
+
+.singer{
+    grid-area:"singer"
+}
+.create input{
+    padding: 1vh;
+    width: 30vh;
+    border-radius: 1vh;
+}
+
+.create form{
+    position: relative;
+    top: 20vh;
+    left: 7vh;
+}
+
+.create button{
+    border-radius: 3px;
+    position: relative;
+    top: 2vh;
+    left: 9vh;
+}
+#submitsong{
+    margin-left:4vh;
+}
+#backsonglist{
+    margin-left:8vh;
+}

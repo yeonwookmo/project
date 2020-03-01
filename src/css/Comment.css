@@ -1,0 +1,55 @@
+#comment{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows:4fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "image text text"
+    "word word star1"
+    "word word rating1"
+    "back back submit";
+}
+
+#comment img{
+    grid-area: image;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 70%;
+    margin: auto;
+}
+#comment textarea{
+    grid-area: text;
+    width:auto;
+    height:auto;
+    resize:none;
+    font-size: 3vw;
+    padding: 5vh;
+    margin-top: 2vh;
+    margin-right:2vh;
+    border-radius: 5vh;
+    height: 20vh;
+}
+#words{
+    grid-area: word;
+    margin-left: 5vh;
+}
+#commentstar{
+    grid-area: star1;
+    margin: auto;
+    margin-bottom:0vh;
+}
+#commentrating{
+    grid-area: rating1;
+    margin: auto;
+    margin-top:0;
+}
+#submit{
+    grid-area: submit;
+    width: 15vh;
+    margin-top: auto;
+    margin-bottom: auto
+}
+#back{
+    grid-area: back;
+    width:15vh;
+    margin:auto;
+}
